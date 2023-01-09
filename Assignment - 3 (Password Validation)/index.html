@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .msg{
+            color: green;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function checkPass(){
+            var txt = document.getElementById("txt1").value;
+            var msg = document.getElementById("msg");
+            //console.log(txt);
+
+            var len = txt.length;
+            var upper = false;
+            var lower = false;
+            var digit = false;
+            for(let i=0; i<len; i++){
+                var ch = txt.charAt(i);
+                if(ch == ch.toUpperCase()){
+                    upper = true;
+                }
+                if(ch == ch.toLowerCase()){
+                    lower = true;
+                }
+                if(ch>=0 && ch<=9){
+                    digit = true;
+                }
+            }
+
+            //checking
+            if(len>=8 && upper && lower && digit){
+                msg.innerHTML = "strong";
+            }
+            else{
+                msg.innerHTML = "weak";
+            }
+        }
+    </script>
+    <form action="#">
+       Enter password: <input type="text" id="txt1" onkeyup="checkPass()" >
+       <span class="msg" id="msg"></span>
+    </form>
+</body>
+</html>
