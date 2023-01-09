@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GitHub User Data using Ajax</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+  <h1>GitHub User Details</h1>
+</div>
+
+<div class="container">
+  <form>
+    <div class="form">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your Github username" required>
+   </div>
+    <button id="btn" type="button" onclick="getRepositories(), fetchData()">Get Data</button>
+  </form>
+
+  <div id="name"></div>
+  <h3 id="repo"></h3>
+  <div id="repositoryList">
+   
+  </div>
+ 
+</div>
+
+ 
+</body>
+</html>
