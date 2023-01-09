@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vehicle Registration Form</title>
+
+    <script>
+        function submitData(){
+             var name = document.getElementById("name").value;
+             var email = document.getElementById("email").value;
+             var contact = document.getElementById("contact").value;
+             var add = document.getElementById("add").value;
+             var regno = document.getElementById("reg").value;
+             var fuel = document.getElementById("fuel").value;
+             var engine = document.getElementById("engine").value;
+             var mobilereg = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+             var emailreg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+             if(name==""){
+                document.getElementById("nameError").innerHTML="Enter name";
+             }
+             
+             if(!emailreg.test(email) || email==""){
+                document.getElementById("emailError").innerHTML="Enter valid email";
+             }
+             if(!mobilereg.test(contact)){
+                document.getElementById("contactError").innerHTML="Enter valid mobile no";;
+             }
+             if(add==""){
+                document.getElementById("addError").innerHTML="Enter address";
+             }
+             if(regno==""){
+                document.getElementById("regError").innerHTML="Enter Registration no.";
+             }
+             if(fuel==""){
+                document.getElementById("fuelError").innerHTML="Enter Fuel used";
+             }
+             if(engine==""){
+                document.getElementById("engineError").innerHTML="Enter Engine ";
+             }
+        }
+
+    </script>
+</head>
+<body>
+    <form action="#">
+        <h2>Vehicle Registration Form</h2>
+        <div class="container">
+            <div class="flex1">
+                <label for="name">Full Name </label><br>
+                <label for="add">Address</label><br>
+                <label for="email">Email</label><br>
+                <label for="contact">Mobile no.</label><br>
+                <label for="regno">Registration no</label><br>
+                <label for="fuel">Fuel used</label><br>
+                <label for="engine">Engine CC</label><br>
+            </div>
+
+            <div class="flex2">
+                <input type="text" id="name"><br>
+                <input type="text" id="add"><br>
+                <input type="email" id="email"><br>
+                <input type="number" id="contact"><br>
+                <input type="number" id="reg"><br>
+                <input type="text" id="fuel"><br>
+                <input type="text" id="engine"><br>
+            </div>
+
+            <div class="error">
+                <span class="error" id="nameError"></span><br> 
+                <span class="error" id="addError"></span><br>
+                <span class="error" id="emailError"></span><br>
+                <span class="error" id="contactError"></span><br>
+                <span class="error" id="regError"></span><br>
+                <span class="error" id="fuelError"></span><br>
+                <span class="error" id="engineError"></span><br>
+            </div>
+        </div>
+
+        <div class="buttonClass">
+            <button onclick="submitData()">Submit</button>
+            <button id="cancel" type="reset">Clear</button>
+        </div>
+        
+    </form>
+</body>
+</html>
