@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corona E-pass</title>
+
+    
+</head>
+<body>
+    <form action="connect.php">
+        <h2>Corona-Curfew E-Pass Form Application</h2><br><br>
+        <div class="container">
+            <div class="flex1">
+                <label for="name">Full Name </label><br>
+                <label for="mobile">Mobile number </label><br>
+                <label for="addres">Address</label><br>
+                <label for="purpose">Purpose </label><br><br>
+                <label for="vehicle">Vehicle nuber</label><br><br>
+            </div>
+
+            <div class="flex2">
+                <input type="text" id="fullname" name="fullname"><br>
+                <input type="mobile" id="mobile" name="mobile"><br>
+                <input type="address" id="address" name="address"><br>
+                <textarea name="purpose" id="purpose" cols="40" rows="5"></textarea><br>
+                <input type="text" id="vehicle" name="vehicle"><br>             
+            </div>
+        </div>
+
+        <div class="buttonClass">
+            <button id="submit" name="submit">Submit</button>
+
+        </div>
+        
+      
+    </form>
+</body>
+</html>
