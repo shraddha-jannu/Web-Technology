@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="loginStyle.css">
+</head>
+<body>
+    <div class="loginbox">
+        
+        <h1>Login</h1>
+        <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password">
+            <input type="submit" name="" value="Login">
+            <!-- <a href="#">Forgot password?</a><br> -->
+            <p>
+                New Here?
+                <u><a href="Registration.html">
+                    Click here to register!
+                </a></u>
+            </p>
+        </form>
+    </div>
+
+
+    <script>
+        var id;
+        function validation()  
+        {  
+            id=document.f1.username.value;  
+            var ps=document.f1.password.value;  
+
+            localStorage.setItem("username", id);
+            window.location.href="Profile.php";
+            //alert(id);
+            if(id.length=="" && ps.length=="") {  
+                alert("User Name and Password fields are empty");  
+                return false;  
+            }  
+            else  
+            {  
+                if(id.length=="") {  
+                    alert("User Name is empty");  
+                    return false;  
+                }   
+                if (ps.length=="") {  
+                alert("Password field is empty");  
+                return false;  
+                }  
+            } 
+            
+            
+
+        }  
+    </script>  
+</body>
+</html>
