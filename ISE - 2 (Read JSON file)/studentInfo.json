@@ -1,0 +1,9 @@
+{
+    "student_data":[
+        {"name":"Shraddha","branch":"CSE","city":"Solapur"},
+        {"name":"Ritika","branch":"CSE","city":"Solapur"},
+        {"name":"Priyanka","branch":"IT","city":"Pune"},
+        {"name":"Pooja","branch":"EnTC","city":"Pune"},
+        {"name":"Aish","branch":"CSE","city":"Solapur"}
+  ]
+}

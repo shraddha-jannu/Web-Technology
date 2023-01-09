@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISE 2</title>
+
+    <style>
+        body {
+            text-align: center;
+        }
+  
+        h1 {
+            color: #44A075;
+        }
+  
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+  
+        caption {
+            margin: 10px 0;
+        }
+  
+        tr {
+            height: 30px;
+        }
+  
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th{
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #588bf8;
+            color: white;
+        }
+        .info {
+            display: flex;
+            justify-content: center;
+        }
+  
+        button {
+            margin: 20px 0;
+            height: 40px;
+            width: 100px;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        function loadJSON(){
+            const name = document.getElementsByClassName("name");
+            const branch = document.getElementsByClassName("branch");
+            const city = document.getElementsByClassName("city");
+
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "studentInfo.json", true);
+            xhr.getResponseHeader("Content-type", "application/json");
+        
+            xhr.onload = function() {
+                const obj = JSON.parse(this.responseText);
+                Array.from(name).forEach((name, index) => {
+                    name.innerText = obj.student_data[index].name;
+                });
+        
+                Array.from(branch).forEach((branch, index) => {
+                    branch.innerText = obj.student_data[index].branch;
+                });
+
+                Array.from(city).forEach((city, index) => {
+                    city.innerText = obj.student_data[index].city;
+                });
+            }
+        
+            xhr.send();
+            var count = Object. keys(xhr). length;
+            console. log(count);
+        }
+        
+    </script>
+
+</head>
+<body>
+    <h2>Click the below button to get student info</h2>
+    <button class="btn" onclick="loadJSON()">Click</button><br>
+    <table id='table'>
+        <!-- HEADING FORMATION -->
+        <div class="info">
+            <table>
+                <caption>Student Details</caption>
+                <th>Name</th>
+                <th>Branch</th>
+                <th>City</th>
+                <tr>
+                    <td class="name"></td>
+                    <td class="branch"></td>
+                    <td class="city"></td>
+                </tr>
+                <tr>
+                    <td class="name"></td>
+                    <td class="branch"></td>
+                    <td class="city"></td>
+                </tr>
+                <tr>
+                    <td class="name"></td>
+                    <td class="branch"></td>
+                    <td class="city"></td>
+                </tr>
+                <tr>
+                    <td class="name"></td>
+                    <td class="branch"></td>
+                    <td class="city"></td>
+                </tr>
+                <tr>
+                    <td class="name"></td>
+                    <td class="branch"></td>
+                    <td class="city"></td>
+                </tr>
+            </table>
+        </div>
+</body>
+</html>
