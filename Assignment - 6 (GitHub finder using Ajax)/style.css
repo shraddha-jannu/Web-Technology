@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin:0;
+}
+
+.box{
+    height: 6vh;
+    background-color: aqua;
+    text-align: center;
+    padding: 2vh;
+}
+
+.container{
+margin-left: 15vh;
+margin-right: 15vh;
+margin-top: 6vh;
+margin-bottom: 6vh;
+border: 2px solid red;
+padding-top: 8vh;
+padding-bottom:8vh;
+padding-left: 70vh;
+ /* padding-left: max(60vh,20vh);  */
+ /* padding-left: min(50vh,20vh);  */
+padding-right:40vh;
+min-height: 20vh;
+max-height: 100vh;
+}
+
+.form{
+margin-top: 4vh;
+display: table-row;
+
+
+
+}
+
+label, input{
+display: table-cell;
+/* margin-bottom: 4vh; */
+font-size: 2vh;
+
+}
+
+label{
+font-size: larger;
+}
+#username{
+max-width: 55vh;
+min-width: 25vh;
+height: 5vh;
+border-radius: 4px;
+background-color: inherit;
+/* font-size: 2vh; */
+color: black;
+margin-top: 4vh;
+margin-left: 5vh;
+margin-right: 10vh;
+padding-left: 2vh;
+padding-right: 2vh;
+}
+
+#btn{
+padding: 1.5vh;
+max-width: 30vh;
+min-width:25vh;
+min-height:6vh;
+max-height:10vh;
+border-radius: 5px;
+background-color:#4934d3;
+margin-left:19vh;
+margin-top: 2vh;
+margin-bottom: 6vh;
+cursor: pointer;
+color: white;
+font-size: 2vh;
+font-weight: 500;
+font-family: sans-serif;
+}
+
+#btn:active{
+background-color:#270ade;
+}
+
+#name{
+font-size: 4vh;
+color:black;
+/* text-align: center; */
+}
+
+#repo{
+margin-top: 5vh;
+font-size: 4vh;
+}
+
+#repositoryList ul li{
+font-size: 3vh;
+}
